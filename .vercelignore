@@ -1,0 +1,8 @@
+# Vercel 忽略文件
+node_modules
+.next
+.vercel
+*.log
+.DS_Store
+brand-html
+

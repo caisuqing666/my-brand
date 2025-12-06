@@ -1,0 +1,128 @@
+"use client";
+
+import { useState } from "react";
+
+type Run = {
+  id: number;
+  date: string;
+  distance: number;
+  note: string;
+};
+
+// 迷你跑步记录系统
+export default function RunTracker() {
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+
+  const [date, setDate] = useState(today);
+  const [distance, setDistance] = useState("");
+  const [note, setNote] = useState("");
+  const [runs, setRuns] = useState<Run[]>([]);
+
+  const addRun = () => {
+    const trimmedDistance = distance.trim();
+
+    const numDistance = parseFloat(trimmedDistance);
+
+    // 简单检查
+    if (!trimmedDistance || isNaN(numDistance) || numDistance <= 0) {
+      alert("请填写正确的跑步距离（大于 0 的数字）");
+      return;
+    }
+
+    const newRun = {
+      id: Date.now(),
+      date,
+      distance: numDistance,
+      note: note.trim(),
+    };
+
+    setRuns([...runs, newRun]);
+
+    // 清空部分输入
+    setDistance("");
+    setNote("");
+  };
+
+  // 总里程
+  const totalDistance = runs.reduce((sum, run) => sum + run.distance, 0);
+
+  return (
+    <div
+      style={{
+        marginTop: 24,
+        padding: 20,
+        border: "1px solid #ccc",
+        borderRadius: 8,
+      }}
+    >
+      <h2>🏃‍♀️ 迷你跑步记录系统</h2>
+
+      {/* 统计信息 */}
+      <p style={{ marginTop: 8 }}>
+        已记录次数：<strong>{runs.length}</strong> 次，
+        累计里程：<strong>{totalDistance.toFixed(2)}</strong> km
+      </p>
+
+      {/* 日期 */}
+      <div style={{ marginTop: 12 }}>
+        <label style={{ marginRight: 8 }}>日期：</label>
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
+      </div>
+
+      {/* 距离 */}
+      <div style={{ marginTop: 12 }}>
+        <label style={{ marginRight: 8 }}>距离（km）：</label>
+        <input
+          type="number"
+          value={distance}
+          onChange={(e) => setDistance(e.target.value)}
+          placeholder="例如 5 或 10.5"
+          step="0.1"
+        />
+      </div>
+
+      {/* 备注 */}
+      <div style={{ marginTop: 12 }}>
+        <label style={{ display: "block", marginBottom: 4 }}>备注：</label>
+        <textarea
+          value={note}
+          onChange={(e) => setNote(e.target.value)}
+          rows={2}
+          placeholder="比如：配速 6'，状态很好、天气凉爽～"
+          style={{ width: "100%" }}
+        />
+      </div>
+
+      {/* 添加按钮 */}
+      <button style={{ marginTop: 12 }} onClick={addRun}>
+        添加记录
+      </button>
+
+      {/* 记录列表 */}
+      <ul style={{ marginTop: 20 }}>
+        {runs.map((run) => (
+          <li
+            key={run.id}
+            style={{
+              marginBottom: 10,
+              padding: 10,
+              border: "1px solid #eee",
+              borderRadius: 6,
+            }}
+          >
+            <div>
+              📅 {run.date} —— 🏃‍♀️ {run.distance} km
+            </div>
+            {run.note && (
+              <div style={{ marginTop: 4, color: "#555" }}>💬 {run.note}</div>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

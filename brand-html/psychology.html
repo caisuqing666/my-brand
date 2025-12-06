@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人品牌 - 心理服务</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="brand-container">
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-scrolled" id="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <svg class="logo-icon" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M30 50 L50 30 L70 50" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M30 50 Q50 70 70 50" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                    <span>个人品牌</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">首页</a>
+                    <a href="psychology.html" class="nav-link active">心理服务</a>
+                    <a href="growth.html" class="nav-link">成长之路</a>
+                    <a href="ai-lab.html" class="nav-link">AI实验室</a>
+                    <a href="resources.html" class="nav-link">资源库</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="page-main">
+            <section class="page-hero">
+                <h1 class="page-title">心理服务</h1>
+                <p class="page-subtitle">专业、温暖、成长导向的心理支持</p>
+            </section>
+
+            <!-- 个体咨询流程 -->
+            <section class="service-section">
+                <div class="section-container">
+                    <h2 class="section-title">个体咨询流程</h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">01</div>
+                            <h3>初步沟通</h3>
+                            <p>了解您的需求，建立信任关系，确定咨询目标</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">02</div>
+                            <h3>评估分析</h3>
+                            <p>通过专业量表评估，制定个性化咨询方案</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">03</div>
+                            <h3>咨询实施</h3>
+                            <p>运用认知行为、人本主义等方法，陪伴您成长</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">04</div>
+                            <h3>效果评估</h3>
+                            <p>定期回顾进展，调整策略，确保咨询效果</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 企业EAP方案 -->
+            <section class="service-section alt-bg">
+                <div class="section-container">
+                    <h2 class="section-title">企业EAP方案</h2>
+                    <div class="eap-grid">
+                        <div class="eap-card">
+                            <h3>员工心理健康评估</h3>
+                            <ul>
+                                <li>压力水平测评</li>
+                                <li>工作满意度调查</li>
+                                <li>团队氛围分析</li>
+                            </ul>
+                        </div>
+                        <div class="eap-card">
+                            <h3>心理健康培训</h3>
+                            <ul>
+                                <li>压力管理技巧</li>
+                                <li>情绪调节方法</li>
+                                <li>沟通技能提升</li>
+                            </ul>
+                        </div>
+                        <div class="eap-card">
+                            <h3>一对一咨询服务</h3>
+                            <ul>
+                                <li>个人心理疏导</li>
+                                <li>职业发展咨询</li>
+                                <li>危机干预支持</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 免费心理测评 -->
+            <section class="service-section">
+                <div class="section-container">
+                    <h2 class="section-title">免费心理测评</h2>
+                    <div class="assessment-cards">
+                        <div class="assessment-card">
+                            <h3>压力自评量表</h3>
+                            <p>评估您当前的压力水平，了解压力来源</p>
+                            <button class="btn-primary">开始测评</button>
+                        </div>
+                        <div class="assessment-card">
+                            <h3>焦虑自评量表</h3>
+                            <p>检测焦虑程度，识别焦虑触发因素</p>
+                            <button class="btn-primary">开始测评</button>
+                        </div>
+                        <div class="assessment-card">
+                            <h3>抑郁自评量表</h3>
+                            <p>评估情绪状态，及时发现心理困扰</p>
+                            <button class="btn-primary">开始测评</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 咨询预约表单 -->
+            <section id="consultation-form" class="service-section alt-bg">
+                <div class="section-container">
+                    <h2 class="section-title">预约咨询</h2>
+                    <form id="consultation-form" class="consultation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>姓名 *</label>
+                                <input type="text" required name="name">
+                            </div>
+                            <div class="form-group">
+                                <label>邮箱 *</label>
+                                <input type="email" required name="email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>联系电话 *</label>
+                                <input type="tel" required name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label>服务类型 *</label>
+                                <select required name="service">
+                                    <option value="">请选择</option>
+                                    <option value="individual">个体咨询</option>
+                                    <option value="eap">企业EAP</option>
+                                    <option value="assessment">心理测评</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>咨询需求描述</label>
+                            <textarea rows="5" name="message" placeholder="请简要描述您的咨询需求..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">提交预约</button>
+                    </form>
+
+                    <div id="form-success" class="form-success" style="display: none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <p>已收到您的需求，我们将在24小时内回复！</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

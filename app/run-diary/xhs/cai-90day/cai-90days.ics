@@ -1,0 +1,76 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+
+############################
+# 每周一 16:00–18:00 小红书深度内容
+############################
+BEGIN:VEVENT
+DTSTART:20250127T080000Z
+DTEND:20250127T100000Z
+RRULE:FREQ=WEEKLY;BYDAY=MO;COUNT=13
+SUMMARY:XHS 深度内容｜跑步 × INFJ × 洞察
+END:VEVENT
+
+############################
+# 每周三 16:00–17:00 小红书轻内容 1
+############################
+BEGIN:VEVENT
+DTSTART:20250129T080000Z
+DTEND:20250129T090000Z
+RRULE:FREQ=WEEKLY;BYDAY=WE;COUNT=13
+SUMMARY:XHS 轻内容 1｜金句 / 截图 / UI
+END:VEVENT
+
+############################
+# 每周五 14:00–17:00 公众号文章
+############################
+BEGIN:VEVENT
+DTSTART:20250131T060000Z
+DTEND:20250131T090000Z
+RRULE:FREQ=WEEKLY;BYDAY=FR;COUNT=13
+SUMMARY:公众号深度文章｜女性长期主义 × 成熟 INFJ
+END:VEVENT
+
+############################
+# 每周二 20:00–21:30 产品迭代
+############################
+BEGIN:VEVENT
+DTSTART:20250128T120000Z
+DTEND:20250128T133000Z
+RRULE:FREQ=WEEKLY;BYDAY=TU;COUNT=13
+SUMMARY:产品迭代｜跑步系统 UI / 功能
+END:VEVENT
+
+############################
+# 每周四 17:00–18:30 产品测试
+############################
+BEGIN:VEVENT
+DTSTART:20250130T090000Z
+DTEND:20250130T103000Z
+RRULE:FREQ=WEEKLY;BYDAY=TH;COUNT=13
+SUMMARY:产品测试｜API / Bug / 文档
+END:VEVENT
+
+############################
+# 每周六 10:30–12:00 小红书轻内容 2 + 金句
+############################
+BEGIN:VEVENT
+DTSTART:20250201T023000Z
+DTEND:20250201T040000Z
+RRULE:FREQ=WEEKLY;BYDAY=SA;COUNT=13
+SUMMARY:XHS 轻内容 2＋金句生成
+END:VEVENT
+
+############################
+# 每周日 21:00–22:00 周复盘
+############################
+BEGIN:VEVENT
+DTSTART:20250202T130000Z
+DTEND:20250202T140000Z
+RRULE:FREQ=WEEKLY;BYDAY=SU;COUNT=13
+SUMMARY:周复盘｜内容 × 产品 × 情绪 × 节奏
+END:VEVENT
+
+END:VCALENDAR
