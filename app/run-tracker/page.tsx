@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import RunTracker from "@/components/RunTrack";
+import EnergyBar from "@/app/components/EnergyBar";
 
 export default function RunTrackerPage() {
   return (
@@ -66,6 +67,11 @@ export default function RunTrackerPage() {
             这些碎片，会慢慢拼成你 10,000 公里的故事。🌿
           </p>
         </section>
+
+        {/* 今日能量 */}
+        <div className="mt-4">
+          <EnergyBar />
+        </div>
 
         {/* 包裹跑步记录系统的卡片 */}
         <section className="rounded-2xl border border-amber-50 bg-white/80 p-4 shadow-sm backdrop-blur-sm">

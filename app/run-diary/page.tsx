@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-
+import EnergyBar from "@/app/components/EnergyBar";
 type RunDiaryItem = {
   id: number;
   run_date: string;

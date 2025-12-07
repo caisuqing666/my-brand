@@ -1,6 +1,7 @@
 // app/page.tsx
 
 import Link from "next/link";
+import EnergyBar from "@/app/components/EnergyBar";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,11 @@ export default function HomePage() {
             不用一次做完，每天一点点，就很好。
           </p>
         </header>
+
+        {/* 今日能量 */}
+        <div className="mt-4">
+          <EnergyBar />
+        </div>
 
         {/* 功能入口卡片 */}
         <section className="space-y-3">
