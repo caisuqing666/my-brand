@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 蔡蔡的小宇宙
 
-## Getting Started
+一个温暖、人文的个人网站，记录跑步日记、编程学习、阅读摘录和生活感悟。
 
-First, run the development server:
+## ✨ 特色
+
+- 🏃‍♀️ **跑步日记系统** - 记录每一次跑步的公里数、心情和小故事
+- 💭 **心理服务** - 温暖、包容的心理支持空间
+- 🌱 **成长之路** - 记录成长过程中的思考和感悟
+- 🤖 **AI探索** - 用技术理解人，用代码表达关怀
+- 📚 **资源库** - 分享有用的资源和学习材料
+
+## 🎨 设计理念
+
+- **奶油白色配色** - 优雅、克制、温暖的 INFJ 风格
+- **人文关怀** - 强调"慢慢来，也很好"的理念
+- **被接住的感觉** - 每一个文字都希望传达温暖和包容
+
+## 🚀 快速开始
+
+### 安装依赖
+
+```bash
+npm install
+```
+
+### 开发环境
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 [http://localhost:3000](http://localhost:3000) 查看网站。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 构建生产版本
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 项目结构
 
-To learn more about Next.js, take a look at the following resources:
+```
+my-site/
+├── app/
+│   ├── brand/          # 个人品牌页面（蔡蔡的小宇宙）
+│   ├── run-tracker/    # 跑步日记系统
+│   ├── components/     # 共享组件
+│   └── page.tsx        # 首页
+├── lib/                # 工具函数
+└── public/             # 静态资源
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ 技术栈
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js 15** - React 框架
+- **TypeScript** - 类型安全
+- **Tailwind CSS** - 样式框架
+- **Supabase** - 后端服务（如需要）
 
-## Deploy on Vercel
+## 📝 环境变量
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+创建 `.env.local` 文件（已排除在 git 中）：
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+# Supabase 配置（如需要）
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_key
+```
+
+## 🌟 页面说明
+
+- `/` - 首页，欢迎来到小宇宙
+- `/brand` - 个人品牌主页
+- `/brand/psychology` - 心理服务
+- `/brand/growth` - 成长之路
+- `/brand/ai-lab` - AI探索
+- `/brand/resources` - 资源库
+- `/run-tracker` - 跑步日记系统
+
+## 💝 设计哲学
+
+> 慢慢来，也很好。  
+> 在这里，你可以慢慢来，可以停下来，也可以继续往前走。
+
+每一个页面都希望传达温暖、包容和被接住的感觉。不需要完美，只需要真实地存在。
+
+## 📄 License
+
+MIT
+
+---
+
+Made with ❤️ by 蔡蔡

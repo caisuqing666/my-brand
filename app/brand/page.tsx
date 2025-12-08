@@ -26,7 +26,7 @@ export default function BrandHome() {
               <path d="M30 50 L50 30 L70 50" stroke="currentColor" strokeWidth="2" fill="none"/>
               <path d="M30 50 Q50 70 70 50" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
-            <span>个人品牌</span>
+            <span>蔡蔡的小宇宙</span>
           </div>
           <div className="nav-links">
             <Link href="/brand" className="nav-link active">首页</Link>
@@ -43,22 +43,22 @@ export default function BrandHome() {
         <svg className="background-svg" viewBox="0 0 1200 800">
           {/* 跑道线条 */}
           <g className="track-lines">
-            <path d="M0 200 Q300 150 600 200 T1200 200" stroke="rgba(59, 130, 246, 0.3)" strokeWidth="2" fill="none"/>
-            <path d="M0 300 Q300 250 600 300 T1200 300" stroke="rgba(59, 130, 246, 0.2)" strokeWidth="2" fill="none"/>
-            <path d="M0 400 Q300 350 600 400 T1200 400" stroke="rgba(59, 130, 246, 0.3)" strokeWidth="2" fill="none"/>
-            <path d="M0 500 Q300 450 600 500 T1200 500" stroke="rgba(59, 130, 246, 0.2)" strokeWidth="2" fill="none"/>
+            <path d="M0 200 Q300 150 600 200 T1200 200" stroke="rgba(156, 133, 119, 0.2)" strokeWidth="2" fill="none"/>
+            <path d="M0 300 Q300 250 600 300 T1200 300" stroke="rgba(156, 133, 119, 0.15)" strokeWidth="2" fill="none"/>
+            <path d="M0 400 Q300 350 600 400 T1200 400" stroke="rgba(156, 133, 119, 0.2)" strokeWidth="2" fill="none"/>
+            <path d="M0 500 Q300 450 600 500 T1200 500" stroke="rgba(156, 133, 119, 0.15)" strokeWidth="2" fill="none"/>
           </g>
           {/* 神经网络节点 */}
           <g className="neural-network">
-            <circle cx="200" cy="200" r="4" fill="rgba(249, 115, 22, 0.4)"/>
-            <circle cx="400" cy="250" r="4" fill="rgba(249, 115, 22, 0.4)"/>
-            <circle cx="600" cy="200" r="4" fill="rgba(249, 115, 22, 0.4)"/>
-            <circle cx="800" cy="300" r="4" fill="rgba(249, 115, 22, 0.4)"/>
-            <circle cx="1000" cy="250" r="4" fill="rgba(249, 115, 22, 0.4)"/>
-            <line x1="200" y1="200" x2="400" y2="250" stroke="rgba(249, 115, 22, 0.2)" strokeWidth="1"/>
-            <line x1="400" y1="250" x2="600" y2="200" stroke="rgba(249, 115, 22, 0.2)" strokeWidth="1"/>
-            <line x1="600" y1="200" x2="800" y2="300" stroke="rgba(249, 115, 22, 0.2)" strokeWidth="1"/>
-            <line x1="800" y1="300" x2="1000" y2="250" stroke="rgba(249, 115, 22, 0.2)" strokeWidth="1"/>
+            <circle cx="200" cy="200" r="4" fill="rgba(156, 133, 119, 0.25)"/>
+            <circle cx="400" cy="250" r="4" fill="rgba(156, 133, 119, 0.25)"/>
+            <circle cx="600" cy="200" r="4" fill="rgba(156, 133, 119, 0.25)"/>
+            <circle cx="800" cy="300" r="4" fill="rgba(156, 133, 119, 0.25)"/>
+            <circle cx="1000" cy="250" r="4" fill="rgba(156, 133, 119, 0.25)"/>
+            <line x1="200" y1="200" x2="400" y2="250" stroke="rgba(156, 133, 119, 0.15)" strokeWidth="1"/>
+            <line x1="400" y1="250" x2="600" y2="200" stroke="rgba(156, 133, 119, 0.15)" strokeWidth="1"/>
+            <line x1="600" y1="200" x2="800" y2="300" stroke="rgba(156, 133, 119, 0.15)" strokeWidth="1"/>
+            <line x1="800" y1="300" x2="1000" y2="250" stroke="rgba(156, 133, 119, 0.15)" strokeWidth="1"/>
           </g>
         </svg>
       </div>
@@ -67,8 +67,8 @@ export default function BrandHome() {
       <main className="home-main">
         <section className="hero-section">
           <h1 className="hero-title">
-            跨界融合 · 专业成长
-            <span className="hero-subtitle">心理咨询 × 跑步训练 × AI探索</span>
+            慢慢来，也很好
+            <span className="hero-subtitle">在这里，你可以慢慢来，可以停下来，也可以继续往前走</span>
           </h1>
         </section>
 
@@ -83,14 +83,15 @@ export default function BrandHome() {
                   <circle cx="50" cy="50" r="15" stroke="currentColor" strokeWidth="2" fill="none"/>
                 </svg>
               </div>
-              <h3 className="card-title">心理咨询理念</h3>
+              <h3 className="card-title">心理咨询</h3>
               <p className="card-content">
-                以人本主义为核心，结合认知行为疗法，帮助来访者建立内在力量。
-                每一次对话都是成长的契机，每一次倾听都是治愈的开始。
+                在这里，你的感受被看见，你的声音被听见。
+                不需要急着变好，不需要完美，只需要真实地存在。
+                我们一起慢慢走，慢慢找到属于你的节奏和力量。
               </p>
               <div className="card-stats">
-                <span>500+ 咨询小时</span>
-                <span>200+ 来访者</span>
+                <span>500+ 小时陪伴</span>
+                <span>200+ 个故事</span>
               </div>
             </div>
 
@@ -103,14 +104,15 @@ export default function BrandHome() {
                   <circle cx="70" cy="50" r="3" fill="currentColor"/>
                 </svg>
               </div>
-              <h3 className="card-title">跑步里程碑</h3>
+              <h3 className="card-title">跑步日记</h3>
               <p className="card-content">
-                用脚步丈量世界，用意志突破极限。10000公里不是终点，而是新的起点。
-                每一次奔跑都是对自我的挑战，每一次坚持都是意志力的锤炼。
+                用脚步慢慢丈量世界，用呼吸感受当下的自己。
+                不追求速度，不纠结配速，只是安静地跑，安静地感受。
+                每一公里都是与自己的对话，每一步都是对自己的温柔。
               </p>
               <div className="card-stats">
                 <span>10000+ 公里</span>
-                <span>50+ 城市</span>
+                <span>50+ 个城市</span>
               </div>
             </div>
 
@@ -126,14 +128,16 @@ export default function BrandHome() {
                   <path d="M55 65 L70 65" stroke="currentColor" strokeWidth="2"/>
                 </svg>
               </div>
-              <h3 className="card-title">AI学习笔记</h3>
+              <h3 className="card-title">AI探索</h3>
               <p className="card-content">
-                探索AI在心理学领域的应用，用技术赋能心理健康。
-                从情绪识别到智能咨询辅助，记录每一次技术突破与思考。
+                好奇心和温柔可以并存。
+                用技术去理解人，用代码去表达关怀。
+                每一次尝试都是学习，每一次失败都是成长。
+                慢慢来，不着急。
               </p>
               <div className="card-stats">
-                <span>30+ 项目</span>
-                <span>持续学习</span>
+                <span>30+ 次尝试</span>
+                <span>持续探索</span>
               </div>
             </div>
           </div>
@@ -142,7 +146,7 @@ export default function BrandHome() {
 
       {/* 悬浮预约按钮 */}
       <Link href="/brand/psychology#consultation-form" className="floating-booking-btn">
-        <span>立即预约咨询</span>
+        <span>想聊聊吗？</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>

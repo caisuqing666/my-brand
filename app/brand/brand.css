@@ -1,10 +1,16 @@
-/* 品牌网站样式 */
+/* 品牌网站样式 - 奶油白色 INFJ 风格 */
 :root {
-  --color-blue: #3b82f6;      /* 沉稳蓝 */
-  --color-orange: #f97316;    /* 活力橙 */
-  --color-gray: #6b7280;       /* 科技灰 */
-  --color-dark: #1e293b;
-  --color-light: #f8fafc;
+  --color-cream-bg-1: #fdfaf5;    /* 最浅奶油色 */
+  --color-cream-bg-2: #f8f1e8;    /* 中奶油色 */
+  --color-cream-bg-3: #f3e8dd;    /* 深奶油色 */
+  --color-text-primary: #1e293b;  /* 深色文字 */
+  --color-text-secondary: #4e3b31; /* 次要文字 */
+  --color-text-muted: #7A6A5F;    /* 柔和文字 */
+  --color-accent: #9C8577;        /* 强调色 - 柔和棕色 */
+  --color-accent-light: #C7B8A4;  /* 浅强调色 */
+  --color-border: rgba(199, 184, 164, 0.3); /* 边框色 */
+  --color-card-bg: rgba(255, 255, 255, 0.8); /* 卡片背景 */
+  --color-shadow: rgba(156, 133, 119, 0.1); /* 阴影色 */
 }
 
 * {
@@ -15,8 +21,8 @@
 
 .brand-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #fff;
+  background: linear-gradient(135deg, var(--color-cream-bg-1) 0%, var(--color-cream-bg-2) 50%, var(--color-cream-bg-3) 100%);
+  color: var(--color-text-primary);
   position: relative;
   overflow-x: hidden;
 }
@@ -28,15 +34,16 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(253, 250, 245, 0.85);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .navbar-scrolled {
-  background: rgba(15, 23, 42, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(253, 250, 245, 0.95);
+  box-shadow: 0 2px 20px var(--color-shadow);
 }
 
 .nav-container {
@@ -54,13 +61,13 @@
   gap: 0.5rem;
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--color-orange);
+  color: var(--color-text-primary);
 }
 
 .logo-icon {
   width: 32px;
   height: 32px;
-  color: var(--color-orange);
+  color: var(--color-accent);
 }
 
 .nav-links {
@@ -69,7 +76,7 @@
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-muted);
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.3s ease;
@@ -79,7 +86,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--color-orange);
+  color: var(--color-accent);
 }
 
 .nav-link.active::after {
@@ -89,7 +96,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--color-orange);
+  background: var(--color-accent);
 }
 
 /* 首页背景动画 */
@@ -106,21 +113,24 @@
 .background-svg {
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.15;
   animation: float 20s ease-in-out infinite;
 }
 
 .track-lines path {
+  stroke: rgba(156, 133, 119, 0.2);
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: drawLine 8s ease-in-out infinite;
 }
 
 .neural-network circle {
+  fill: rgba(156, 133, 119, 0.25);
   animation: pulse 3s ease-in-out infinite;
 }
 
 .neural-network line {
+  stroke: rgba(156, 133, 119, 0.15);
   stroke-dasharray: 200;
   stroke-dashoffset: 200;
   animation: drawLine 6s ease-in-out infinite;
@@ -173,19 +183,18 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-orange) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-text-primary);
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
   display: block;
   font-size: 1.5rem;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   margin-top: 1rem;
+  letter-spacing: 0.01em;
 }
 
 /* 三联卡片 */
@@ -203,14 +212,15 @@
 }
 
 .dynamic-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-card-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   padding: 2.5rem;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .dynamic-card::before {
@@ -219,16 +229,16 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-blue), var(--color-orange));
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent-light), var(--color-accent));
   transform: scaleX(0);
   transition: transform 0.4s ease;
 }
 
 .dynamic-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: rgba(249, 115, 22, 0.5);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px var(--color-shadow);
+  border-color: var(--color-accent-light);
 }
 
 .dynamic-card:hover::before {
@@ -239,18 +249,19 @@
   width: 60px;
   height: 60px;
   margin-bottom: 1.5rem;
-  color: var(--color-orange);
+  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 .card-title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .card-content {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -260,11 +271,11 @@
   display: flex;
   gap: 1.5rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
 }
 
 .card-stats span {
-  color: var(--color-orange);
+  color: var(--color-accent);
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -275,9 +286,9 @@
   bottom: 2rem;
   right: 2rem;
   z-index: 999;
-  background: linear-gradient(135deg, var(--color-orange) 0%, #fb923c 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 1rem 2rem;
   border-radius: 50px;
   font-size: 1rem;
@@ -286,15 +297,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 16px var(--color-shadow);
   transition: all 0.3s ease;
-  animation: pulse-btn 2s ease-in-out infinite;
   text-decoration: none;
 }
 
 .floating-booking-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.6);
+  box-shadow: 0 8px 24px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 .floating-booking-btn svg {
@@ -303,12 +314,12 @@
 }
 
 @keyframes pulse-btn {
-  0%, 100% {
-    box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
-  }
-  50% {
-    box-shadow: 0 8px 32px rgba(249, 115, 22, 0.6);
-  }
+ 0%, 100% {
+   box-shadow: 0 4px 16px var(--color-shadow);
+ }
+ 50% {
+   box-shadow: 0 6px 20px var(--color-shadow);
+ }
 }
 
 /* 平滑滚动 */
@@ -334,15 +345,13 @@ html {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-orange) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
 }
 
 .page-subtitle {
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   font-weight: 300;
 }
 
@@ -353,7 +362,7 @@ html {
 }
 
 .service-section.alt-bg {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .section-container {
@@ -366,7 +375,7 @@ html {
   font-weight: 600;
   margin-bottom: 3rem;
   text-align: center;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 /* 心理服务页面样式 */
@@ -378,34 +387,36 @@ html {
 }
 
 .process-step {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .process-step:hover {
   transform: translateY(-5px);
-  border-color: var(--color-orange);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .step-number {
   font-size: 3rem;
   font-weight: 700;
-  color: var(--color-orange);
+  color: var(--color-accent);
   margin-bottom: 1rem;
 }
 
 .process-step h3 {
   font-size: 1.25rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .process-step p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -417,22 +428,24 @@ html {
 }
 
 .eap-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .eap-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-blue);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .eap-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: var(--color-blue);
+  color: var(--color-accent);
 }
 
 .eap-card ul {
@@ -442,8 +455,8 @@ html {
 
 .eap-card li {
   padding: 0.75rem 0;
-  color: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .eap-card li:last-child {
@@ -458,55 +471,60 @@ html {
 }
 
 .assessment-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .assessment-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-orange);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .assessment-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .assessment-card p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-orange) 0%, #fb923c 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 0.75rem 2rem;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 /* 咨询表单样式 */
 .consultation-form {
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   padding: 3rem;
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .form-row {
@@ -523,18 +541,18 @@ html {
 
 .form-group label {
   margin-bottom: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--color-text-primary);
   font-weight: 500;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 0.75rem 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -543,8 +561,9 @@ html {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-orange);
-  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-accent);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(156, 133, 119, 0.1);
 }
 
 .form-group textarea {
@@ -554,9 +573,9 @@ html {
 
 .btn-submit {
   width: 100%;
-  background: linear-gradient(135deg, var(--color-orange) 0%, #fb923c 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 1rem 2rem;
   border-radius: 10px;
   font-size: 1.1rem;
@@ -564,11 +583,13 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 .form-success {
@@ -617,29 +638,33 @@ html {
 }
 
 .story-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .story-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px var(--color-shadow);
+  border-color: var(--color-accent-light);
 }
 
 .story-image {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-orange) 100%);
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.6;
 }
 
 .story-placeholder {
   font-size: 4rem;
+  color: white;
 }
 
 .story-content {
@@ -649,26 +674,26 @@ html {
 .story-content h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .story-date {
-  color: var(--color-orange);
+  color: var(--color-accent);
   font-size: 0.9rem;
   margin-bottom: 1rem;
   display: block;
 }
 
 .story-content p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
 .btn-read-more {
   background: transparent;
-  border: 2px solid var(--color-orange);
-  color: var(--color-orange);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
@@ -677,7 +702,7 @@ html {
 }
 
 .btn-read-more:hover {
-  background: var(--color-orange);
+  background: var(--color-accent);
   color: white;
 }
 
@@ -690,52 +715,57 @@ html {
   display: flex;
   gap: 2rem;
   margin-bottom: 3rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .methodology-item:hover {
   transform: translateX(10px);
-  border-color: var(--color-blue);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .method-icon {
   font-size: 3rem;
   flex-shrink: 0;
+  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 .methodology-item h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .methodology-item p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
 }
 
 .challenge-box {
   max-width: 800px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--color-orange);
+  background: var(--color-card-bg);
+  border: 2px solid var(--color-accent);
   border-radius: 20px;
   padding: 3rem;
   text-align: center;
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .challenge-box h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--color-orange);
+  color: var(--color-accent);
 }
 
 .challenge-box p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 2rem;
 }
@@ -754,19 +784,19 @@ html {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-orange);
+  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
 .stat-label {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   font-size: 0.9rem;
 }
 
 .btn-challenge {
-  background: linear-gradient(135deg, var(--color-orange) 0%, #fb923c 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 1rem 3rem;
   border-radius: 50px;
   font-size: 1.1rem;
@@ -774,11 +804,13 @@ html {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .btn-challenge:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 6px 20px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 .map-container {
@@ -786,11 +818,12 @@ html {
 }
 
 .map-placeholder {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 20px;
   padding: 2rem;
   min-height: 500px;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .map-placeholder svg {
@@ -805,7 +838,7 @@ html {
 
 .city-marker:hover {
   transform: scale(1.5);
-  filter: drop-shadow(0 0 10px var(--color-orange));
+  filter: drop-shadow(0 0 10px var(--color-accent));
 }
 
 .map-legend {
@@ -820,21 +853,21 @@ html {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
 }
 
 .legend-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--color-orange);
+  background: var(--color-accent);
 }
 
 .legend-line {
   width: 30px;
   height: 2px;
-  background: rgba(249, 115, 22, 0.4);
-  border-top: 2px dashed var(--color-orange);
+  background: var(--color-accent-light);
+  border-top: 2px dashed var(--color-accent);
 }
 
 /* AI实验室页面样式 */
@@ -846,26 +879,28 @@ html {
 }
 
 .observation-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .observation-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-blue);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .observation-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .observation-card p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -877,9 +912,9 @@ html {
 }
 
 .tag {
-  background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.5);
-  color: var(--color-blue);
+  background: rgba(156, 133, 119, 0.15);
+  border: 1px solid var(--color-accent-light);
+  color: var(--color-accent);
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.85rem;
@@ -966,17 +1001,18 @@ html {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(180deg, var(--color-blue) 0%, var(--color-orange) 100%);
+  background: linear-gradient(180deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
 }
 
 .note-item {
   position: relative;
   margin-bottom: 3rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   margin-left: 2rem;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .note-item::before {
@@ -987,12 +1023,12 @@ html {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--color-orange);
-  border: 3px solid var(--color-dark);
+  background: var(--color-accent);
+  border: 3px solid var(--color-cream-bg-1);
 }
 
 .note-date {
-  color: var(--color-orange);
+  color: var(--color-accent);
   font-weight: 600;
   margin-bottom: 0.5rem;
   display: block;
@@ -1001,18 +1037,18 @@ html {
 .note-content h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .note-content p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
 .code-snippet {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 1.5rem;
   overflow-x: auto;
@@ -1021,14 +1057,14 @@ html {
 
 .code-snippet pre {
   margin: 0;
-  color: #a78bfa;
+  color: var(--color-text-primary);
   font-family: 'Courier New', monospace;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 .code-snippet code {
-  color: #a78bfa;
+  color: var(--color-accent);
 }
 
 .code-showcase {
@@ -1039,20 +1075,22 @@ html {
 }
 
 .showcase-item {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .showcase-item h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .code-demo {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   padding: 1.5rem;
 }
@@ -1072,7 +1110,7 @@ html {
 
 .bar {
   flex: 1;
-  background: linear-gradient(180deg, var(--color-blue) 0%, var(--color-orange) 100%);
+  background: linear-gradient(180deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
   border-radius: 5px 5px 0 0;
   min-height: 20px;
   transition: all 0.3s ease;
@@ -1085,7 +1123,7 @@ html {
 
 .demo-caption {
   text-align: center;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-muted);
   margin-top: 1rem;
   font-size: 0.9rem;
 }
@@ -1098,7 +1136,7 @@ html {
 }
 
 .preview-header {
-  background: var(--color-blue);
+  background: var(--color-accent);
   color: white;
   padding: 1rem;
   font-weight: 600;
@@ -1145,32 +1183,36 @@ html {
 }
 
 .resource-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   transition: all 0.3s ease;
   text-align: center;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .resource-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-orange);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .resource-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--color-accent);
+  opacity: 0.8;
 }
 
 .resource-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .resource-card p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -1179,27 +1221,29 @@ html {
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
   margin-bottom: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border);
 }
 
 .btn-download {
-  background: linear-gradient(135deg, var(--color-orange) 0%, #fb923c 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 0.75rem 2rem;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .btn-download:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 .membership-header {
@@ -1211,43 +1255,48 @@ html {
 
 .btn-login,
 .btn-logout {
-  background: linear-gradient(135deg, var(--color-blue) 0%, #60a5fa 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 0.75rem 2rem;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .btn-login:hover,
 .btn-logout:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 .membership-locked {
   text-align: center;
   padding: 4rem 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
+  background: var(--color-card-bg);
+  border: 2px dashed var(--color-border);
   border-radius: 20px;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .lock-icon {
   font-size: 4rem;
   margin-bottom: 1rem;
+  color: var(--color-accent);
+  opacity: 0.6;
 }
 
 .membership-locked h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .membership-locked p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
@@ -1263,19 +1312,21 @@ html {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 10px;
   margin-bottom: 0.5rem;
+  box-shadow: 0 1px 4px var(--color-shadow);
 }
 
 .benefit-icon {
-  color: var(--color-orange);
+  color: var(--color-accent);
   font-weight: 700;
   font-size: 1.2rem;
 }
 
 .benefit-item span:last-child {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-primary);
 }
 
 .course-grid {
@@ -1286,24 +1337,26 @@ html {
 }
 
 .course-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 15px;
   padding: 2rem;
   position: relative;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .course-card:hover {
   transform: translateY(-5px);
-  border-color: var(--color-orange);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px var(--color-shadow);
 }
 
 .course-badge {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: var(--color-orange);
+  background: var(--color-accent);
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
@@ -1314,11 +1367,11 @@ html {
 .course-card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: var(--color-text-primary);
 }
 
 .course-card p {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -1329,24 +1382,26 @@ html {
   gap: 1rem;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-muted);
 }
 
 .btn-course {
-  background: linear-gradient(135deg, var(--color-orange) 0%, #fb923c 100%);
+  background: var(--color-accent);
   color: white;
-  border: none;
+  border: 1px solid var(--color-accent-light);
   padding: 0.75rem 2rem;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  box-shadow: 0 2px 8px var(--color-shadow);
 }
 
 .btn-course:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+  box-shadow: 0 4px 16px var(--color-shadow);
+  background: var(--color-text-muted);
 }
 
 /* 响应式设计 */

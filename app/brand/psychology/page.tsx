@@ -33,7 +33,7 @@ export default function PsychologyPage() {
               <path d="M30 50 L50 30 L70 50" stroke="currentColor" strokeWidth="2" fill="none"/>
               <path d="M30 50 Q50 70 70 50" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
-            <span>个人品牌</span>
+            <span>蔡蔡的小宇宙</span>
           </div>
           <div className="nav-links">
             <Link href="/brand" className="nav-link">首页</Link>
@@ -48,33 +48,33 @@ export default function PsychologyPage() {
       <main className="page-main">
         <section className="page-hero">
           <h1 className="page-title">心理服务</h1>
-          <p className="page-subtitle">专业、温暖、成长导向的心理支持</p>
+          <p className="page-subtitle">在这里，你可以慢慢说，慢慢来，慢慢好起来</p>
         </section>
 
         {/* 个体咨询流程 */}
         <section className="service-section">
           <div className="section-container">
-            <h2 className="section-title">个体咨询流程</h2>
+            <h2 className="section-title">我们如何一起工作</h2>
             <div className="process-steps">
               <div className="process-step">
                 <div className="step-number">01</div>
-                <h3>初步沟通</h3>
-                <p>了解您的需求，建立信任关系，确定咨询目标</p>
+                <h3>第一次见面</h3>
+                <p>不用准备什么，不用想好要说什么。我们慢慢聊，你想到哪里就说到哪里。我会认真听，也会问一些问题，帮助我们彼此了解。</p>
               </div>
               <div className="process-step">
                 <div className="step-number">02</div>
-                <h3>评估分析</h3>
-                <p>通过专业量表评估，制定个性化咨询方案</p>
+                <h3>一起看看</h3>
+                <p>我们一起看看你现在在哪里，想要去哪里。不着急，慢慢来。有时候我们也会用一些工具，帮助我们更清楚地看见自己。</p>
               </div>
               <div className="process-step">
                 <div className="step-number">03</div>
-                <h3>咨询实施</h3>
-                <p>运用认知行为、人本主义等方法，陪伴您成长</p>
+                <h3>慢慢走</h3>
+                <p>我会陪着你，一起慢慢走。有时候会快一点，有时候会慢一点，都没关系。重要的是，你不是一个人。</p>
               </div>
               <div className="process-step">
                 <div className="step-number">04</div>
-                <h3>效果评估</h3>
-                <p>定期回顾进展，调整策略，确保咨询效果</p>
+                <h3>回头看</h3>
+                <p>偶尔我们一起回头看看，看看我们走了多远，看看哪些地方变了，哪些地方还需要时间。不着急，慢慢来。</p>
               </div>
             </div>
           </div>
@@ -83,30 +83,30 @@ export default function PsychologyPage() {
         {/* 企业EAP方案 */}
         <section className="service-section alt-bg">
           <div className="section-container">
-            <h2 className="section-title">企业EAP方案</h2>
+            <h2 className="section-title">企业心理支持</h2>
             <div className="eap-grid">
               <div className="eap-card">
-                <h3>员工心理健康评估</h3>
+                <h3>了解大家的状态</h3>
                 <ul>
-                  <li>压力水平测评</li>
-                  <li>工作满意度调查</li>
-                  <li>团队氛围分析</li>
+                  <li>看看大家最近怎么样</li>
+                  <li>听听大家的声音</li>
+                  <li>了解团队的氛围</li>
                 </ul>
               </div>
               <div className="eap-card">
-                <h3>心理健康培训</h3>
+                <h3>一起学习</h3>
                 <ul>
-                  <li>压力管理技巧</li>
-                  <li>情绪调节方法</li>
-                  <li>沟通技能提升</li>
+                  <li>如何与压力相处</li>
+                  <li>如何照顾自己的情绪</li>
+                  <li>如何更好地沟通</li>
                 </ul>
               </div>
               <div className="eap-card">
-                <h3>一对一咨询服务</h3>
+                <h3>一对一陪伴</h3>
                 <ul>
-                  <li>个人心理疏导</li>
-                  <li>职业发展咨询</li>
-                  <li>危机干预支持</li>
+                  <li>需要的时候，有人听你说</li>
+                  <li>困惑的时候，有人陪你找答案</li>
+                  <li>困难的时候，有人接住你</li>
                 </ul>
               </div>
             </div>
@@ -116,22 +116,22 @@ export default function PsychologyPage() {
         {/* 免费心理测评 */}
         <section className="service-section">
           <div className="section-container">
-            <h2 className="section-title">免费心理测评</h2>
+            <h2 className="section-title">了解自己</h2>
             <div className="assessment-cards">
               <div className="assessment-card">
-                <h3>压力自评量表</h3>
-                <p>评估您当前的压力水平，了解压力来源</p>
-                <button className="btn-primary">开始测评</button>
+                <h3>压力自评</h3>
+                <p>看看最近的压力有多大，从哪里来的。不用害怕，只是看看而已。</p>
+                <button className="btn-primary">试试看</button>
               </div>
               <div className="assessment-card">
-                <h3>焦虑自评量表</h3>
-                <p>检测焦虑程度，识别焦虑触发因素</p>
-                <button className="btn-primary">开始测评</button>
+                <h3>焦虑自评</h3>
+                <p>感受一下自己的焦虑，看看它在说什么。焦虑有时候是在提醒我们什么。</p>
+                <button className="btn-primary">试试看</button>
               </div>
               <div className="assessment-card">
-                <h3>抑郁自评量表</h3>
-                <p>评估情绪状态，及时发现心理困扰</p>
-                <button className="btn-primary">开始测评</button>
+                <h3>情绪自评</h3>
+                <p>看看最近的情绪怎么样。情绪没有好坏，只是需要被看见。</p>
+                <button className="btn-primary">试试看</button>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export default function PsychologyPage() {
         {/* 咨询预约表单 */}
         <section id="consultation-form" className="service-section alt-bg">
           <div className="section-container">
-            <h2 className="section-title">预约咨询</h2>
+            <h2 className="section-title">想聊聊吗？</h2>
             <form className="consultation-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -187,13 +187,13 @@ export default function PsychologyPage() {
                 </div>
               </div>
               <div className="form-group">
-                <label>咨询需求描述</label>
-                <textarea
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="请简要描述您的咨询需求..."
-                />
+                  <label>想说的话（选填）</label>
+                  <textarea
+                    rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    placeholder="想说什么都可以，不用想太多，想到哪里就写到哪里..."
+                  />
               </div>
               <button type="submit" className="btn-submit">提交预约</button>
             </form>
@@ -204,7 +204,7 @@ export default function PsychologyPage() {
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
-                <p>已收到您的需求，我们将在24小时内回复！</p>
+                <p>收到啦，我会尽快回复你的。慢慢来，不着急。</p>
               </div>
             )}
           </div>

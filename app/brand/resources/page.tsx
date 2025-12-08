@@ -17,7 +17,7 @@ export default function ResourcesPage() {
               <path d="M30 50 L50 30 L70 50" stroke="currentColor" strokeWidth="2" fill="none"/>
               <path d="M30 50 Q50 70 70 50" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
-            <span>个人品牌</span>
+            <span>蔡蔡的小宇宙</span>
           </div>
           <div className="nav-links">
             <Link href="/brand" className="nav-link">首页</Link>
@@ -203,6 +203,8 @@ export default function ResourcesPage() {
     </div>
   );
 }
+
+
 
 
 
