@@ -1,8 +1,16 @@
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabaseClient";
+import { supabase, checkSupabaseEnv } from "@/lib/supabaseClient";
 
 export async function POST(request: Request) {
   try {
+    // 在运行时检查环境变量
+    if (!checkSupabaseEnv()) {
+      return NextResponse.json(
+        { error: 'Supabase 环境变量未配置' },
+        { status: 503 }
+      )
+    }
+    
     const body = await request.json();
     const {
       run_date,

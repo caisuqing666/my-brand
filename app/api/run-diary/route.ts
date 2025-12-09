@@ -1,6 +1,6 @@
 // app/api/run-diary/route.ts
 import { NextResponse } from "next/server";
-import { supabase } from "@/lib/supabaseClient";
+import { supabase, checkSupabaseEnv } from "@/lib/supabaseClient";
 
 // 统一使用 Supabase 中的最终表：run_logs
 // 这样所有跑步记录都集中在 run_logs 里，run_diary 表可以不用了
@@ -8,6 +8,14 @@ import { supabase } from "@/lib/supabaseClient";
 // 读取列表：GET /api/run-diary
 export async function GET() {
   try {
+    // 在运行时检查环境变量
+    if (!checkSupabaseEnv()) {
+      return NextResponse.json(
+        { error: 'Supabase 环境变量未配置' },
+        { status: 503 }
+      )
+    }
+    
     const { data, error } = await supabase
       .from("run_logs")
       .select("*")
@@ -29,6 +37,14 @@ export async function GET() {
 // 新增一条记录：POST /api/run-diary
 export async function POST(request: Request) {
   try {
+    // 在运行时检查环境变量
+    if (!checkSupabaseEnv()) {
+      return NextResponse.json(
+        { error: 'Supabase 环境变量未配置' },
+        { status: 503 }
+      )
+    }
+    
     const body = await request.json();
     const { run_date, distance_km, mood, weather } = body;
 
